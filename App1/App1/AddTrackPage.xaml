@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.AddTrackPage">
+    <StackLayout>
+        <Button Text="Создать плейлист" Clicked="CreatePlaylist_Clicked" />
+        <ListView x:Name="PlaylistListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding PlaylistName}" />
+                            <Button Text="Добавить песню" Clicked="AddSong_Clicked" CommandParameter="{Binding PlaylistName}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Entry x:Name="PlaylistNameEntry" Placeholder="Название плейлиста" IsVisible="false" />
+        <Button Text="Создать плейлист с именем" Clicked="CreatePlaylistWithName_Clicked" IsVisible="false" x:Name="CreatePlaylistWithNameButton" />
+    </StackLayout>
+</ContentPage>

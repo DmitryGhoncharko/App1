@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.CalendarPage"
+             xmlns:controls="clr-namespace:Xamarin.Forms.Controls;assembly=Xamarin.Forms.Core">
+
+	<ScrollView>
+		<Grid x:Name="buttonGrid">
+			<Grid.RowDefinitions>
+				<!-- Добавим три строки в сетку -->
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<!-- Добавим десять столбцов в сетку -->
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+		<!-- Создаем 31 кнопку и размещаем их в сетке -->
+<Button Text="1" Command="{Binding ButtonCommand}" CommandParameter="1" Grid.Row="0" Grid.Column="0" />
+<Button Text="2" Command="{Binding ButtonCommand}" CommandParameter="2" Grid.Row="0" Grid.Column="1" />
+<Button Text="3" Command="{Binding ButtonCommand}" CommandParameter="3" Grid.Row="0" Grid.Column="2" />
+<Button Text="4" Command="{Binding ButtonCommand}" CommandParameter="4" Grid.Row="0" Grid.Column="3" />
+<Button Text="5" Command="{Binding ButtonCommand}" CommandParameter="5" Grid.Row="0" Grid.Column="4" />
+<Button Text="6" Command="{Binding ButtonCommand}" CommandParameter="6" Grid.Row="0" Grid.Column="5" />
+<Button Text="7" Command="{Binding ButtonCommand}" CommandParameter="7" Grid.Row="0" Grid.Column="6" />
+<Button Text="8" Command="{Binding ButtonCommand}" CommandParameter="8" Grid.Row="0" Grid.Column="7" />
+<Button Text="9" Command="{Binding ButtonCommand}" CommandParameter="9" Grid.Row="0" Grid.Column="8" />
+<Button Text="10" Command="{Binding ButtonCommand}" CommandParameter="10" Grid.Row="0" Grid.Column="9" />
+<Button Text="11" Command="{Binding ButtonCommand}" CommandParameter="11" Grid.Row="1" Grid.Column="0" />
+<Button Text="12" Command="{Binding ButtonCommand}" CommandParameter="12" Grid.Row="1" Grid.Column="1" />
+<Button Text="13" Command="{Binding ButtonCommand}" CommandParameter="13" Grid.Row="1" Grid.Column="2" />
+<Button Text="14" Command="{Binding ButtonCommand}" CommandParameter="14" Grid.Row="1" Grid.Column="3" />
+<Button Text="15" Command="{Binding ButtonCommand}" CommandParameter="15" Grid.Row="1" Grid.Column="4" />
+<Button Text="16" Command="{Binding ButtonCommand}" CommandParameter="16" Grid.Row="1" Grid.Column="5" />
+<Button Text="17" Command="{Binding ButtonCommand}" CommandParameter="17" Grid.Row="1" Grid.Column="6" />
+<Button Text="18" Command="{Binding ButtonCommand}" CommandParameter="18" Grid.Row="1" Grid.Column="7" />
+<Button Text="19" Command="{Binding ButtonCommand}" CommandParameter="19" Grid.Row="1" Grid.Column="8" />
+<Button Text="20" Command="{Binding ButtonCommand}" CommandParameter="20" Grid.Row="1" Grid.Column="9" />
+<Button Text="21" Command="{Binding ButtonCommand}" CommandParameter="21" Grid.Row="2" Grid.Column="0" />
+<Button Text="22" Command="{Binding ButtonCommand}" CommandParameter="22" Grid.Row="2" Grid.Column="1" />
+<Button Text="23" Command="{Binding ButtonCommand}" CommandParameter="23" Grid.Row="2" Grid.Column="2" />
+<Button Text="24" Command="{Binding ButtonCommand}" CommandParameter="24" Grid.Row="2" Grid.Column="3" />
+<Button Text="25" Command="{Binding ButtonCommand}" CommandParameter="25" Grid.Row="2" Grid.Column="4" />
+<Button Text="26" Command="{Binding ButtonCommand}" CommandParameter="26" Grid.Row="2" Grid.Column="5" />
+<Button Text="27" Command="{Binding ButtonCommand}" CommandParameter="27" Grid.Row="2" Grid.Column="6" />
+<Button Text="28" Command="{Binding ButtonCommand}" CommandParameter="28" Grid.Row="2" Grid.Column="7" />
+<Button Text="29" Command="{Binding ButtonCommand}" CommandParameter="29" Grid.Row="2" Grid.Column="8" />
+<Button Text="30" Command="{Binding ButtonCommand}" CommandParameter="30" Grid.Row="2" Grid.Column="9" />
+<Button Text="31" Command="{Binding ButtonCommand}" CommandParameter="31" Grid.Row="3" Grid.Column="0" />
+
+		</Grid>
+	</ScrollView>
+</ContentPage>

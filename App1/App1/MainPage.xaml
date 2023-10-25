@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+
+    <StackLayout>
+        <!-- Дата в верхнем правом углу -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="10">
+            <Label Text="{Binding CurrentDate}" VerticalOptions="Center" />
+        </StackLayout>
+
+        <!-- Кнопки -->
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+            <Button Text="+" Clicked="OnAddSongClicked" />
+            <Button Text="Quote" Clicked="OnQuoteClicked" />
+            <Button Text="Silence" Clicked="OnSilenceClicked" />
+            <Button Text="Calendar" Clicked="OnCalendarClicked" />
+            <Button Text="Playlist" Clicked="OnPlaylistClicked" />
+        </StackLayout>
+
+    </StackLayout>
+
+
+</ContentPage>
