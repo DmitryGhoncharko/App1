@@ -7,6 +7,8 @@ using System.Linq;
 using Xamarin.Forms;
 using Newtonsoft.Json;
 using Plugin.SimpleAudioPlayer;
+using Mono.Android.App;
+using Android.Media;
 
 namespace App1
 {
@@ -62,15 +64,22 @@ namespace App1
                 RemoveTrack("",selectedTrack.Uri);
             }
         }
-        private void PlayTrack(string trackUri)
+        private async void PlayTrack(string trackUri)
         {
             try
             {
+                
                 ISimpleAudioPlayer player = CrossSimpleAudioPlayer.Current;
                 string cleanedString = trackUri.Replace("[", "").Replace("]", "").Replace("\"", "");
-                Console.WriteLine(cleanedString);
-                player.Load(cleanedString);
-                player.Play();
+                if (!string.IsNullOrEmpty(trackUri))
+                {
+                    using (var mediaPlayer = new MediaPlayer())
+                    {
+                        mediaPlayer.SetDataSource(trackUri);
+                        mediaPlayer.Prepare();
+                        mediaPlayer.Start();
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -105,7 +114,7 @@ namespace App1
             }
 
             // После удаления обновите представление плейлистов
-           // UpdatePlaylistView();
+           //UpdatePlaylistView();
         }
     }
 }

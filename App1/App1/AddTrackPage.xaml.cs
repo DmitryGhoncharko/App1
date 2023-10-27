@@ -7,6 +7,8 @@ using System.Linq;
 using Xamarin.Forms;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using Xamarin.Forms.PlatformConfiguration;
+using System.IO;
 
 namespace App1
 {
@@ -57,10 +59,12 @@ namespace App1
                         { DevicePlatform.Android, new[] { "audio/*" } }
                     }),
                 });
-
+                
+               
                 if (fileResult != null)
                 {
                     string songUri = fileResult.FullPath;
+                    
                     Console.WriteLine(songUri);
 
                     string playlistJson = Preferences.Get(playlistName, string.Empty);
@@ -91,7 +95,8 @@ namespace App1
                 Console.WriteLine($"Ошибка выбора файла: {ex.Message}");
             }
         }
-
+      
+        
         private void UpdatePlaylistView()
         {
             string playlistNames = Preferences.Get("Плейлисты", "");
